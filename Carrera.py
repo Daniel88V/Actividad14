@@ -12,7 +12,7 @@ def agregar_corredor():
             else:
                 break
         while True:
-            nombre = input("Ingrese el nombre del corredor: ")
+            nombre = input("Ingrese el nombre del corredor: ").upper()
             if not nombre:
                 print("Error, campo requerido. Ingrese el nombre del corredor")
             else:
@@ -61,9 +61,9 @@ def quicks_edad_mayores(lista):
 def main():
     while True:
         print("======MENÚ======")
-        print("1. Listado de repartidores.")
-        print("2. Buscar repartidor.")
-        print("3. Estadisticas.")
+        print("1. Agregar corredores")
+        print("2. Mostrar participantes ordenados por nombre.")
+        print("3. Mostrar participantes ordenados por edad.")
         print("4. Salir.")
         opcion = input("Seleccione una opción: ")
         match opcion:
@@ -72,6 +72,7 @@ def main():
             case "2":
                 hola = list(corredores.items())
                 resultado = quicks_nombre(hola)
-                print(resultado)
+                for nombre, valor in resultado:
+                    print(f"Dorsal: {nombre} | Datos: {valor}")
 if __name__ == "__main__":
     main()
