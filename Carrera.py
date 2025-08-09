@@ -42,3 +42,19 @@ def quicks_nombre(lista):
     iguales = [x for x in lista if x[1]['nombre'] == pivote[1]['nombre']]
     mayores = [x for x in lista[1:] if x[1]['nombre'] > pivote[1]['nombre']]
     return quicks_nombre(menores) + iguales + quicks_nombre(mayores)
+def quicks_edad_menores(lista):
+    if len(lista) <= 1:
+        return lista
+    pivote = lista[0]
+    menores = [x for x in lista[1:] if x[1]['edad'] < pivote[1]['edad']]
+    iguales = [x for x in lista if x[1]['edad'] == pivote[1]['edad']]
+    mayores = [x for x in lista[1:] if x[1]['edad'] > pivote[1]['edad']]
+    return quicks_nombre(menores) + iguales + quicks_nombre(mayores)
+def quicks_edad_mayores(lista):
+    if len(lista) <= 1:
+        return lista
+    pivote = lista[0]
+    menores = [x for x in lista[1:] if x[1]['edad'] < pivote[1]['edad']]
+    iguales = [x for x in lista if x[1]['edad'] == pivote[1]['edad']]
+    mayores = [x for x in lista[1:] if x[1]['edad'] > pivote[1]['edad']]
+    return quicks_nombre(mayores) + iguales + quicks_nombre(menores)
