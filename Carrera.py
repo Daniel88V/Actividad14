@@ -58,3 +58,20 @@ def quicks_edad_mayores(lista):
     iguales = [x for x in lista if x[1]['edad'] == pivote[1]['edad']]
     mayores = [x for x in lista[1:] if x[1]['edad'] > pivote[1]['edad']]
     return quicks_nombre(mayores) + iguales + quicks_nombre(menores)
+def main():
+    while True:
+        print("======MENÚ======")
+        print("1. Listado de repartidores.")
+        print("2. Buscar repartidor.")
+        print("3. Estadisticas.")
+        print("4. Salir.")
+        opcion = input("Seleccione una opción: ")
+        match opcion:
+            case "1":
+                agregar_corredor()
+            case "2":
+                hola = list(corredores.items())
+                resultado = quicks_nombre(hola)
+                print(resultado)
+if __name__ == "__main__":
+    main()
