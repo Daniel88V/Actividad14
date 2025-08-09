@@ -74,5 +74,18 @@ def main():
                 resultado = quicks_nombre(hola)
                 for nombre, valor in resultado:
                     print(f"Dorsal: {nombre} | Datos: {valor}")
+            case "3":
+                adios = list(corredores.items())
+                print("1. Menor a mayor")
+                print("2. Mayor a menor")
+                opciones = input("Seleccione el orden que desea ")
+                if opciones == "1":
+                    menores = quicks_edad_menores(adios)
+                    for nombre, valor in menores:
+                        print(f"Dorsal: {nombre} | Datos: {valor}")
+                elif opciones == "2":
+                    mayores = quicks_edad_mayores(adios)
+                    for nombre, valor in mayores:
+                        print(f"Dorsal: {nombre} | Datos: {valor}")
 if __name__ == "__main__":
     main()
