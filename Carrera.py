@@ -19,7 +19,7 @@ def agregar_corredor():
                 break
         while True:
             edad = int(input("Ingrese la edad del corredor: "))
-            if edad <= 0:
+            if 7 < dorsal < 70:
                 print("Error, la edad no puede ser negativa ni 0")
             else:
                 break
