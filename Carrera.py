@@ -87,5 +87,10 @@ def main():
                     mayores = quicks_edad_mayores(adios)
                     for nombre, valor in mayores:
                         print(f"Dorsal: {nombre} | Datos: {valor}")
+            case "4":
+                print("Saliendo del programa")
+                exit()
+            case _:
+                print("Error, opción no valida")
 if __name__ == "__main__":
     main()
