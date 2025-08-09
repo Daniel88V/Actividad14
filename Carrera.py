@@ -24,4 +24,13 @@ def agregar_corredor():
             else:
                 break
         while True:
-            categoria = input("Ingrese la categoria del corredor: ")
+            categoria = input("Ingrese la categoria del corredor(juvenil, adulto, máster): ")
+            if not categoria:
+                print("Error, campo requerido")
+            else:
+                break
+        corredores[dorsal] = {
+            "nombre": nombre,
+            "edad": edad,
+            "categoria": categoria
+        }
