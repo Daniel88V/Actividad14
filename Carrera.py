@@ -34,3 +34,11 @@ def agregar_corredor():
             "edad": edad,
             "categoria": categoria
         }
+def quicks_nombre(lista):
+    if len(lista) <= 1:
+        return lista
+    pivote = lista[0]
+    menores = [x for x in lista[1:] if x[1]['nombre'] < pivote[1]['nombre']]
+    iguales = [x for x in lista if x[1]['nombre'] == pivote[1]['nombre']]
+    mayores = [x for x in lista[1:] if x[1]['nombre'] > pivote[1]['nombre']]
+    return quicks_nombre(menores) + iguales + quicks_nombre(mayores)
